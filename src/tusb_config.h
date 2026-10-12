@@ -10,7 +10,14 @@
 //--------------------------------------------------------------------
 #define CFG_TUSB_MCU                OPT_MCU_RP2040
 #define CFG_TUSB_RHPORT0_MODE       OPT_MODE_DEVICE
+
+#ifndef CFG_TUSB_OS
 #define CFG_TUSB_OS                 OPT_OS_NONE
+#endif
+
+#ifndef BOARD_TUD_RHPORT
+#define BOARD_TUD_RHPORT            0
+#endif
 
 #ifndef CFG_TUD_ENDPOINT0_SIZE
 #define CFG_TUD_ENDPOINT0_SIZE       64
